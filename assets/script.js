@@ -1,27 +1,54 @@
-// HINT: You can delete this console.log after you no longer need it!
-console.log('JavaScript code has loaded!')
 // First, tell us your name
-let yourName = "Jane Doe" // HINT: Replace this with your own name!
+// selecting the element with an id of credit
+const credit = document.querySelector('#credit')
+let yourName = "Sarah Wiedrich" 
+credit.textContent = `Created by ${yourName}`
 
 // We'll use these variables to track the counts of each cookie type
 let gb = 0 // Gingerbread
 let cc = 0 // Chocolate Chip
-let sugar = 0 // Sugar Sprinkle
+let ss = 0 // Sugar Sprinkle
 
-// selecting the element with an id of credit
-const credit = document.querySelector('#credit')
-// selecting the element with an id of add-gb
+//add buttons increasing quantity
 const gbPlusBtn = document.querySelector('#add-gb')
+let gbQuantity = document.querySelector('#qty-gb')
+gbPlusBtn.addEventListener('click', function(){
+    gb++
+    gbQuantity.textContent = (gb)
+})  
 
-// Code to update name display
-credit.textContent = `Created by ${yourName}`
-
-// Event listener for clicks on the "+" button for Gingerbread cookies
-gbPlusBtn.addEventListener('click', function() {
-// HINT: You can delete this console.log after you no longer need it!
-console.log('Gingerbread + button was clicked!')
-
-// TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
+const ccPlusBtn = document.querySelector('#add-cc')
+let ccQuantity = document.querySelector('#qty-cc')
+ccPlusBtn.addEventListener('click', function(){
+    cc++
+    ccQuantity.textContent = (cc)
 })
 
-// TODO: Hook up event listeners for the rest of the buttons
+const sugarPlusBtn = document.querySelector('#add-sugar')
+let sugarQuantity = document.querySelector('#qty-sugar')
+sugarPlusBtn.addEventListener('click', function(){
+    ss++
+    sugarQuantity.textContent = (ss)
+})
+
+//minus buttons subtracting quantity
+const gbMinusBtn = document.querySelector('#minus-gb')
+gbMinusBtn.addEventListener('click', function(){
+    if (gb > 0)
+    gb--
+    gbQuantity.textContent = (gb)
+})
+
+const ccMinusBtn = document.querySelector('#minus-cc')
+ccMinusBtn.addEventListener('click', function(){
+    if (cc > 0)
+    cc--
+    ccQuantity.textContent = (cc)
+})
+
+const sugarMinusBtn = document.querySelector ('#minus-sugar')
+sugarMinusBtn.addEventListener('click', function(){
+    if (ss > 0)
+    ss--
+    sugarQuantity.textContent = (ss)
+})
