@@ -46,9 +46,15 @@ ccMinusBtn.addEventListener('click', function(){
     ccQuantity.textContent = (cc)
 })
 
-const sugarMinusBtn = document.querySelector ('#minus-sugar')
+const sugarMinusBtn = document.querySelector('#minus-sugar')
 sugarMinusBtn.addEventListener('click', function(){
     if (ss > 0)
     ss--
     sugarQuantity.textContent = (ss)
 })
+
+//total
+const totalqty = document.querySelector('#qty-total')
+let total =
+totalqty.textContent = (total)
+
