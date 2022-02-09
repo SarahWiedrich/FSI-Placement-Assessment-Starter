@@ -15,6 +15,8 @@ let gbQuantity = document.querySelector('#qty-gb')
 gbPlusBtn.addEventListener('click', function(){
     gb++
     gbQuantity.textContent = (gb)
+    total++
+    totalqty.textContent = (total)
 })  
 
 const ccPlusBtn = document.querySelector('#add-cc')
@@ -22,6 +24,8 @@ let ccQuantity = document.querySelector('#qty-cc')
 ccPlusBtn.addEventListener('click', function(){
     cc++
     ccQuantity.textContent = (cc)
+    total++
+    totalqty.textContent = (total)
 })
 
 const sugarPlusBtn = document.querySelector('#add-sugar')
@@ -29,6 +33,8 @@ let sugarQuantity = document.querySelector('#qty-sugar')
 sugarPlusBtn.addEventListener('click', function(){
     ss++
     sugarQuantity.textContent = (ss)
+    total++
+    totalqty.textContent = (total)
 })
 
 //minus buttons subtracting quantity
@@ -37,6 +43,9 @@ gbMinusBtn.addEventListener('click', function(){
     if (gb > 0)
     gb--
     gbQuantity.textContent = (gb)
+    if (total > 0)
+        total--
+    totalqty.textContent = (total)
 })
 
 const ccMinusBtn = document.querySelector('#minus-cc')
@@ -44,6 +53,9 @@ ccMinusBtn.addEventListener('click', function(){
     if (cc > 0)
     cc--
     ccQuantity.textContent = (cc)
+    if (total > 0)
+    total--
+    totalqty.textContent = (total)
 })
 
 const sugarMinusBtn = document.querySelector('#minus-sugar')
@@ -51,10 +63,13 @@ sugarMinusBtn.addEventListener('click', function(){
     if (ss > 0)
     ss--
     sugarQuantity.textContent = (ss)
+    if (total > 0)
+    total--
+    totalqty.textContent = (total)
 })
 
 //total
 const totalqty = document.querySelector('#qty-total')
-let total =
+let total = 0
 totalqty.textContent = (total)
 
