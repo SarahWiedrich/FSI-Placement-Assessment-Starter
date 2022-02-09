@@ -40,31 +40,32 @@ sugarPlusBtn.addEventListener('click', function(){
 //minus buttons subtracting quantity
 const gbMinusBtn = document.querySelector('#minus-gb')
 gbMinusBtn.addEventListener('click', function(){
-    if (gb > 0)
-    gb--
+    if (gb > 0){
+        gb -= 1
+        total -= 1
+    }
     gbQuantity.textContent = (gb)
-    if (total > 0)
-        total--
+
     totalqty.textContent = (total)
 })
 
 const ccMinusBtn = document.querySelector('#minus-cc')
 ccMinusBtn.addEventListener('click', function(){
-    if (cc > 0)
-    cc--
+    if (cc > 0){
+        cc -= 1
+        total -= 1
+    }
     ccQuantity.textContent = (cc)
-    if (total > 0)
-    total--
     totalqty.textContent = (total)
 })
 
 const sugarMinusBtn = document.querySelector('#minus-sugar')
 sugarMinusBtn.addEventListener('click', function(){
-    if (ss > 0)
-    ss--
+    if (ss > 0){
+        ss -= 1
+        total -= 1
+    }
     sugarQuantity.textContent = (ss)
-    if (total > 0)
-    total--
     totalqty.textContent = (total)
 })
 
